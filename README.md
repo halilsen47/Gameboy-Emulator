@@ -28,26 +28,30 @@ gameboy-emulator/
 └── dr_mario.gb         # Test ROM'u (Dr. Mario)
 ```
 
+
  
 # 🔄 Bileşenler Arası Veri Akışı Bağlantıları
-1-) main.cpp, SDL2 kütüphanesini kullanarak grafik penceresini oluşturur ve oyun döngüsünü (while loop) işletir. Her adımda CPU'yu çalıştırarak donanımı ilerletir.
 
-2-) mmu.cpp (Memory Bus), bellek haritasını (ROM, VRAM, WRAM, I/O Register, HRAM) merkezi olarak yönetir. CPU, PPU ve Timer modülleri okuma/yazma işlemlerini bu bus üzerinden gerçekleştirir.
+* main.cpp, SDL2 kütüphanesini kullanarak grafik penceresini oluşturur ve oyun döngüsünü (while loop) işletir. Her adımda CPU'yu çalıştırarak donanımı ilerletir.
 
-3-) cpu.cpp, MMU üzerinden sıradaki opcode'u çeker, register'ları (A, B, C, D, E, H, L, PC, SP) ve bayrakları günceller, harcanan döngü (cycle) miktarını döndürür.
+* mmu.cpp (Memory Bus), bellek haritasını (ROM, VRAM, WRAM, I/O Register, HRAM) merkezi olarak yönetir. CPU, PPU ve Timer modülleri okuma/yazma işlemlerini bu bus üzerinden gerçekleştirir.
 
-4-) ppu.cpp, VRAM verilerini ve LCD durumlarını işleyerek ekran piksellerini SDL2 ekran buffer'ına aktarır.
+* cpu.cpp, MMU üzerinden sıradaki opcode'u çeker, register'ları (A, B, C, D, E, H, L, PC, SP) ve bayrakları günceller, harcanan döngü (cycle) miktarını döndürür.
 
-5-) timer.cpp, CPU döngülerini takip ederek Game Boy'un iç saat (DIV ve TIMA) register'larını günceller ve gerektiğinde kesme (interrupt) üretir.
+* ppu.cpp, VRAM verilerini ve LCD durumlarını işleyerek ekran piksellerini SDL2 ekran buffer'ına aktarır.
 
-#⚙️ Gereksinimler ve Bağımlılıklar
+* timer.cpp, CPU döngülerini takip ederek Game Boy'un iç saat (DIV ve TIMA) register'larını günceller ve gerektiğinde kesme (interrupt) üretir.
+
+
+# ⚙️ Gereksinimler ve Bağımlılıklar
+
 Projeyi Linux üzerinde derleyip çalıştırmak için sisteminizde aşağıdaki araçların kurulu olması gerekir:
 
-1-) C++17 destekli bir derleyici (g++ veya clang)
+* C++17 destekli bir derleyici (g++ veya clang)
 
-2-) SDL2 kütüphanesi (Görselleştirme ve girişler için)
+* SDL2 kütüphanesi (Görselleştirme ve girişler için)
 
-#🗺️ Gelecek Planlar (Roadmap)
+# 🗺️ Gelecek Planlar (Roadmap)
 [ ] Eksik LR35902 opcode'larının tamamlanması
 
 [ ] MBC1/MBC3 desteğinin eklenmesiyle daha büyük ROM'ların çalıştırılması

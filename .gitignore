@@ -1,0 +1,14 @@
+# Derleme ve çıktı klasörleri
+build/
+bin/
+out/
+
+# Derlenmiş nesne dosyaları ve binary'ler
+*.o
+*.out
+*.exe
+*.app
+
+# IDE ve editör dosyaları
+.vscode/
+.idea/

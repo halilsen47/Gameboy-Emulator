@@ -26,7 +26,7 @@ gameboy-emulator/
 ├── timer.h & timer.cpp # Zamanlayıcı ve Divider/Counter register yönetimi
 ├── tetris.gb           # Test ROM'u (Tetris)
 └── dr_mario.gb         # Test ROM'u (Dr. Mario)
-
+```
 🔄 Bileşenler Arası Veri Akışı Bağlantıları
 1-) main.cpp, SDL2 kütüphanesini kullanarak grafik penceresini oluşturur ve oyun döngüsünü (while loop) işletir. Her adımda CPU'yu çalıştırarak donanımı ilerletir.
 
@@ -51,3 +51,4 @@ Projeyi Linux üzerinde derleyip çalıştırmak için sisteminizde aşağıdaki
 [ ] MBC1/MBC3 desteğinin eklenmesiyle daha büyük ROM'ların çalıştırılması
 
 [ ] Ses (APU) entegrasyonu
+

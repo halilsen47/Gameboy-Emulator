@@ -27,7 +27,9 @@ gameboy-emulator/
 ├── tetris.gb           # Test ROM'u (Tetris)
 └── dr_mario.gb         # Test ROM'u (Dr. Mario)
 ```
-🔄 Bileşenler Arası Veri Akışı Bağlantıları
+
+ 
+# 🔄 Bileşenler Arası Veri Akışı Bağlantıları
 1-) main.cpp, SDL2 kütüphanesini kullanarak grafik penceresini oluşturur ve oyun döngüsünü (while loop) işletir. Her adımda CPU'yu çalıştırarak donanımı ilerletir.
 
 2-) mmu.cpp (Memory Bus), bellek haritasını (ROM, VRAM, WRAM, I/O Register, HRAM) merkezi olarak yönetir. CPU, PPU ve Timer modülleri okuma/yazma işlemlerini bu bus üzerinden gerçekleştirir.
@@ -38,17 +40,19 @@ gameboy-emulator/
 
 5-) timer.cpp, CPU döngülerini takip ederek Game Boy'un iç saat (DIV ve TIMA) register'larını günceller ve gerektiğinde kesme (interrupt) üretir.
 
-⚙️ Gereksinimler ve Bağımlılıklar
+#⚙️ Gereksinimler ve Bağımlılıklar
 Projeyi Linux üzerinde derleyip çalıştırmak için sisteminizde aşağıdaki araçların kurulu olması gerekir:
 
 1-) C++17 destekli bir derleyici (g++ veya clang)
 
 2-) SDL2 kütüphanesi (Görselleştirme ve girişler için)
 
-🗺️ Gelecek Planlar (Roadmap)
+#🗺️ Gelecek Planlar (Roadmap)
 [ ] Eksik LR35902 opcode'larının tamamlanması
 
 [ ] MBC1/MBC3 desteğinin eklenmesiyle daha büyük ROM'ların çalıştırılması
 
 [ ] Ses (APU) entegrasyonu
+ 
+
 
